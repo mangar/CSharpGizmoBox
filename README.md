@@ -10,7 +10,7 @@
 - Hora
 - Data e Hora *TODO*
 - Mobile
-- Double Field *TODO*
+- Double Field
 - Range *TODO*
 - Domain *TODO*
 - Email
