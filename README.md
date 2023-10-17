@@ -7,9 +7,9 @@
 - CPF 
 - CNPJ
 - Data
-- Hora *TODO*
+- Hora
 - Data e Hora *TODO*
-- Mobile *TODO*
+- Mobile
 - Double Field *TODO*
 - Range *TODO*
 - Domain *TODO*

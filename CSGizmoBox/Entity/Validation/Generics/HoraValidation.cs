@@ -1,11 +1,12 @@
 ﻿using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace CSGizmoBox.Entity.Validation.Generics
 {
-    public class HoraValidation
+    public class DataValidation
     {
 
-        public static ValidationVO Validate(string content, string Codigo = "ERRO-HORA", string Message = "Hora Inválida")
+        public static ValidationVO Validate(string content, string Codigo = "ERRO-DATA", string Message = "DATA Inválida")
         {
 
             string _content = (content == null ? "" : content).Replace(" ", "").Replace(".", "").Replace("-", "");
@@ -25,10 +26,12 @@ namespace CSGizmoBox.Entity.Validation.Generics
 
         }
 
-        private static bool _Validar(string horaContent, string formatoHora = "HH:mm")
+
+
+        private static bool _Validar(string dataContent, string formatoData = "dd/MM/yyyy")
         {
             CultureInfo cultura = CultureInfo.InvariantCulture;
-            if (DateTime.TryParseExact(horaContent, formatoHora, cultura, DateTimeStyles.None, out DateTime resultado))
+            if (DateTime.TryParseExact(dataContent, formatoData, cultura, DateTimeStyles.None, out DateTime resultado))
             {
                 return true;
             }
@@ -37,6 +40,7 @@ namespace CSGizmoBox.Entity.Validation.Generics
                 return false;
             }
         }
+
+
     }
 }
-
