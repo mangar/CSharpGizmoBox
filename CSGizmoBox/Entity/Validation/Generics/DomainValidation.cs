@@ -1,11 +1,11 @@
 ﻿namespace CSGizmoBox.Entity.Validation.Generics
 {
-    public class DomainValidation
+    public class DomainValidation<T>
     {
-        public static ValidationVO Validate(string content, List<string> domain, string Codigo = "ERROR-DOMAIN", string Message = "Valor não faz parte do domínio para o campo.")
+        public static ValidationVO Validate(T content, List<T> domain, string Codigo = "ERROR-DOMAIN", string Message = "Valor não faz parte do domínio para o campo.")
         {
 
-            if (string.IsNullOrWhiteSpace(content) || domain == null || domain.Count == 0)
+            if (content == null || domain == null || domain.Count == 0)
             {
                 return new ValidationVO()
                 {
