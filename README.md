@@ -21,6 +21,22 @@
 
 
 
+## Local Cache
+
+*TODO*
+
+__Funcionalidades__
+
+- ADD
+- GET
+- REMOVE
+- INCR
+- DECR
+- TTL (Time to Live)
+- DUMP
+
+
+
 ## Consulta de CEP
 
  *TODO*
