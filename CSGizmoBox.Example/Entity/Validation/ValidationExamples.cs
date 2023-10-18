@@ -5,15 +5,15 @@ namespace CSGizmoBox.Example.Entity.Validation
     public class ValidationExamples
     {
 
-        static void Main(string[] args)
-        {
-            var validateExamples = new ValidationExamples();
-            //validateExamples.SingleValidateExample();
+        //static void Main(string[] args)
+        //{
+        //    var validateExamples = new ValidationExamples();
+        //    //validateExamples.SingleValidateExample();
 
 
-            validateExamples.MultipleValidateExample();
+        //    validateExamples.MultipleValidateExample();
 
-        }
+        //}
 
 
         public void SingleValidateExample()

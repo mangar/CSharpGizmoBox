@@ -12,7 +12,7 @@
 - Mobile
 - Double Field
 - Range *TODO*
-- Domain *TODO*
+- Domain
 - Email
 - Decimal
 - Integer
@@ -28,7 +28,7 @@
 __Funcionalidades__
 
 - ADD
-- GET
+- GET / GET DEFAULT
 - REMOVE
 - INCR
 - DECR
