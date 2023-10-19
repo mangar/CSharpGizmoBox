@@ -1,6 +1,4 @@
-﻿using System.Data.SqlTypes;
-using System.Runtime.ConstrainedExecution;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace CSGizmoBox.LocalCache
 {
@@ -78,7 +76,10 @@ namespace CSGizmoBox.LocalCache
 
         public static string Dump()
         {
-            return JsonSerializer.Serialize(_storage);
+            return JsonSerializer.Serialize(_storage, new JsonSerializerOptions { WriteIndented = true });
+
+            //return JsonConvert.SerializeObject(_storage, Formatting.Indented);
+
         }
 
 

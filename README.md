@@ -23,23 +23,25 @@
 
 ## Local Cache
 
-*TODO*
-
-__Funcionalidades__
-
 - ADD
 - GET / GET DEFAULT
 - REMOVE
-- INCR
-- DECR
 - TTL (Time to Live)
 - DUMP
+- INCR *TODO*
+- DECR *TODO*
+
 
 
 
 ## Consulta de CEP
 
  *TODO*
+
+ - Config via variáveis de ambiente ou parametros no construtor
+ - Opções
+	- Buscar em mais de uma fonte (Brasil Aberto, apicep.com, viacep.com.br)
+	- Cache local ou remoto do retorno
 
 
 
