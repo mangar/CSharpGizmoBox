@@ -10,7 +10,7 @@ namespace CSGizmoBox.LocalCache
     {
         static void Main(string[] args) {
 
-            LCache.Add("1", "11");
+            LCache.Set("1", "11");
 
             var content = LCache.Get("1");
             Console.WriteLine($"Get(1): {content}");
@@ -24,7 +24,7 @@ namespace CSGizmoBox.LocalCache
             Console.WriteLine($"Get(3): {content}");
 
 
-            LCache.Add("4", "4 >> 1 second", 1);
+            LCache.Set("4", "4 >> 1 second", 1);
 
             content = LCache.Get("4");
             Console.WriteLine($"Get(4): {content}");

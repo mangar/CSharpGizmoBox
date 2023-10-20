@@ -23,7 +23,7 @@
 
 ## Local Cache
 
-- ADD
+- SET
 - GET / GET DEFAULT
 - REMOVE
 - TTL (Time to Live)

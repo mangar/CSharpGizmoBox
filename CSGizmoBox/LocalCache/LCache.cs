@@ -8,7 +8,7 @@ namespace CSGizmoBox.LocalCache
         private static Dictionary<object, Content> _storage = new Dictionary<object, Content>();
 
     
-        public static void Add(object key, object value, long ttlSeconds = 999999)
+        public static void Set(object key, object value, long ttlSeconds = 999999)
         {
             long _ttl = ttlSeconds;
             if (ttlSeconds != 999999)
@@ -56,7 +56,7 @@ namespace CSGizmoBox.LocalCache
             { 
                 if (addIfNotFound)
                 {
-                    LCache.Add(key, defaultValue, ttlSeconds);
+                    LCache.Set(key, defaultValue, ttlSeconds);
                 }
                 return defaultValue;
             }

@@ -14,10 +14,10 @@ namespace CSGizmoBox.Test.LocalCache
         }
 
         [Fact]
-        public void Add_Get_NotNull()
+        public void Set_Get_NotNull()
         {
             //add / get
-            LCache.Add("key1", "value_01");
+            LCache.Set("key1", "value_01");
 
             var val1 = LCache.Get("key1");
             Assert.Equal(val1, "value_01");
@@ -41,13 +41,13 @@ namespace CSGizmoBox.Test.LocalCache
 
 
         [Fact]
-        public void Add_Timeout_1sec()
+        public void Set_Timeout_1sec()
         {
 
             var key = "key_04";
             var value = "value >> 1 second";
 
-            LCache.Add(key, value, 1);
+            LCache.Set(key, value, 1);
 
             var content = LCache.Get(key);
             Assert.Equal(value, content);
