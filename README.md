@@ -11,7 +11,7 @@
 - Data e Hora *TODO*
 - Mobile
 - Double Field
-- Range *TODO*
+- Range
 - Domain
 - Email
 - Decimal
