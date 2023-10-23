@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSGizmoBox.Cep.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace CSGizmoBox.Cep.Services
 {
     public class ConsultarCepFactory
     {
-        public static AConsultarCEP CreateContularCep(string providerKey)
+        public static AConsultarCEP CreateConsultarCep(HttpClient httpClient, string providerKey)
         {
-            return null;
+            ConsultarCepViaCep consultarCepViaCep = new ConsultarCepViaCep(httpClient);
+            return consultarCepViaCep;
         }
     }
 }

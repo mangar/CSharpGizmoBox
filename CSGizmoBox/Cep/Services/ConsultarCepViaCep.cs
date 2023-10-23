@@ -25,8 +25,10 @@ namespace CSGizmoBox.Cep.Services
                 {
                     string content = await response.Content.ReadAsStringAsync();
 
-
-
+                    /*
+                     1 - tratar o conteudo de retorno aqui (colocar no objeto CepValue e depois dentro do CepResponse
+                     2 - Generalizar esse metodo. Dexar apenas a especificidade do tratamento do respose da API
+                     */
 
                     _response.ProviderResponse = content;
 

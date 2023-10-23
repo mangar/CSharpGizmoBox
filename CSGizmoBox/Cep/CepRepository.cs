@@ -40,16 +40,15 @@ namespace CSGizmoBox.Cep
             foreach (string providerKey in CepConfigOptions.Providers)
             {
                 
-                CepResponse _cepResponse = await ConsultarCepFactory.CreateContularCep(providerKey).GetCEP(cep);
-                if (_cepResponse.HttpStatusCode == 200)
-                {
-                    cepResponse.Provider = providerKey;
-                    cepResponse.CepValue = _cepResponse.CepValue;
-                    cepResponse.HttpStatusCode = _cepResponse.HttpStatusCode;
-                    cepResponse.ProviderResponse = _cepResponse.ProviderResponse;
-                    
-                    break;
-                }
+                CepResponse _cepResponse = await ConsultarCepFactory.CreateConsultarCep(_httpClient, providerKey).GetCEP(cep);
+
+                cepResponse.Provider = providerKey;
+                cepResponse.CepValue = _cepResponse.CepValue;
+                cepResponse.HttpStatusCode = _cepResponse.HttpStatusCode;
+                cepResponse.HttpResponseMessage = _cepResponse.HttpResponseMessage; 
+                cepResponse.ProviderResponse = _cepResponse.ProviderResponse;
+
+                if (_cepResponse.HttpStatusCode == 200) { break; }
 
             }
 
