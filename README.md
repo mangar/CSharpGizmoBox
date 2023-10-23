@@ -42,7 +42,18 @@
  - Opções
 	- Buscar em mais de uma fonte (Brasil Aberto, apicep.com, viacep.com.br)
 	- Cache local ou remoto do retorno
+	- 
+- Cache
+- Generalizar o API Call
+- Mais um ou dois Providers
 
+
+- Providers
+	- ViaCEP - https://viacep.com.br/
+	- OpenCEP - https://opencep.com/
+	- API CEP - https://apicep.com/api-de-consulta/
+	- BrasilAberto - https://brasilaberto.com/blog/posts/5-melhores-apis-de-cep-2023
+	- BrasilAPI - https://brasilapi.com.br/
 
 
 ## Licença

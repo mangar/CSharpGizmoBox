@@ -9,6 +9,7 @@
         public string ProviderResponse { get; set; }
         public DateTime RequestAt { get; set; }
         public DateTime ResponseAt { get; set; }
+        public CepConfigOptions ConfigOptions { get; set; }
 
     }
 

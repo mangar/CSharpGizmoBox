@@ -3,7 +3,7 @@ using CSGizmoBox.Cep.Services;
 
 namespace CSGizmoBox.Cep
 {
-    class CepRepository
+    public class CepRepository
     {
         public CepConfigOptions CepConfigOptions { get; set; } = new CepConfigOptions();
 
@@ -33,7 +33,8 @@ namespace CSGizmoBox.Cep
             CepResponse cepResponse = new CepResponse()
             {
                 RequestAt = DateTime.Now,
-                HttpStatusCode = 400
+                HttpStatusCode = 400,
+                ConfigOptions = CepConfigOptions
             };
 
 
