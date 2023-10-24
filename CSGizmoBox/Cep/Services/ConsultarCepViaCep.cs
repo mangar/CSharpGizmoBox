@@ -33,6 +33,9 @@ namespace CSGizmoBox.Cep.Services
             CepResponse _response = new CepResponse();
             string _apiUrl = VIACEP_URL.Replace("|cep|", cep);
 
+            //Dictionary<string, string> dict = await _APICall(_apiUrl);
+
+
             try
             {               
                 HttpResponseMessage response = await _httpClient.GetAsync(_apiUrl);
