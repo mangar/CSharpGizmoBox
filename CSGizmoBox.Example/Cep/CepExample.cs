@@ -6,13 +6,14 @@ namespace CSGizmoBox.Example.Cep
     public class CepExample
     {
 
-        //static void Main(string[] args) {
-        //    Console.WriteLine(">>>");
-        //    var cepExample = new CepExample();
-        //    cepExample.Call();
-        //    Thread.Sleep(10 * 1000);
-        //    Console.WriteLine("<<<");
-        //}
+        static void Main(string[] args)
+        {
+            Console.WriteLine(">>>");
+            var cepExample = new CepExample();
+            cepExample.Call();
+            Thread.Sleep(10 * 1000);
+            Console.WriteLine("<<<");
+        }
 
 
         async void Call()
