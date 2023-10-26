@@ -1,37 +1,31 @@
 ﻿using CSGizmoBox.Cep.Entity;
-using CSGizmoBox.LocalCache;
-using Newtonsoft.Json;
-using System.Net.Http;
 
 namespace CSGizmoBox.Cep.Services
 {
-    public class ConsultarCepViaCep : AConsultarCEP
+    public class ConsultarCepOpenCep : AConsultarCEP
     {
 
-        public static readonly string VIACEP_URL = "https://viacep.com.br/ws/|cep|/json/";
+        public static readonly string URL = "https://opencep.com/v1/|cep|";
 
-        public ConsultarCepViaCep(HttpClient httpClient) : base(httpClient) { }
+        public ConsultarCepOpenCep(HttpClient httpClient) : base(httpClient) { }
 
 
         /**
          * 
          * {
-         *   "cep": "04515-030",
-         *   "logradouro": "Avenida Jacutinga",
-         *   "complemento": "",
-         *   "bairro": "Indianópolis",
-         *   "localidade": "São Paulo",
+         *   "cep": "14055-490",
+         *   "logradouro": "Rua Paraná",
+         *   "complemento": "até 1498/1499",
+         *   "bairro": "Ipiranga",
+         *   "localidade": "Ribeirão Preto",
          *   "uf": "SP",
-         *   "ibge": "3550308",
-         *   "gia": "1004",
-         *   "ddd": "11",
-         *   "siafi": "7107"
+         *   "ibge": "3543402"
          * }
          * 
          */
         public override async Task<CepResponse> GetCEP(string cep)
-        {
-            string _apiUrl = VIACEP_URL.Replace("|cep|", NormilizarCep(cep));
+        {           
+            string _apiUrl = URL.Replace("|cep|", NormilizarCep(cep));
 
             CepResponse cepResponse = await _APICall(_apiUrl);
 
@@ -44,17 +38,14 @@ namespace CSGizmoBox.Cep.Services
                     Complemento = cepResponse.ProviderResponse["complemento"],
                     Bairro = cepResponse.ProviderResponse["bairro"],
                     Cidade = cepResponse.ProviderResponse["localidade"],
-                    Estado = cepResponse.ProviderResponse["uf"],
-                    DDD = cepResponse.ProviderResponse["ddd"]
+                    Estado = cepResponse.ProviderResponse["uf"]
                 };
                 cepResponse.CepValue = cepValue;
 
             }
 
-            return cepResponse;            
+            return cepResponse; 
         }
-
-
 
     }
 }

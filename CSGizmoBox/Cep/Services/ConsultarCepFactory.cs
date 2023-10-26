@@ -1,18 +1,23 @@
-﻿using CSGizmoBox.Cep.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSGizmoBox.Cep.Services
+﻿namespace CSGizmoBox.Cep.Services
 {
     public class ConsultarCepFactory
     {
         public static AConsultarCEP CreateConsultarCep(HttpClient httpClient, string providerKey)
         {
-            ConsultarCepViaCep consultarCepViaCep = new ConsultarCepViaCep(httpClient);
-            return consultarCepViaCep;
+
+            if (providerKey.ToUpper().Equals("VIACEP"))
+            {
+                return new ConsultarCepViaCep(httpClient);
+            }
+
+            else if (providerKey.ToUpper().Equals("OPENCEP"))
+            {
+                return new ConsultarCepOpenCep(httpClient);
+            }
+            else
+            {
+                throw new Exception("Provider Key Invalido");
+            }
         }
     }
 }

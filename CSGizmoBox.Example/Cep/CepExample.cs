@@ -1,11 +1,5 @@
 ﻿using CSGizmoBox.Cep;
 using CSGizmoBox.Cep.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSGizmoBox.Example.Cep
 {
@@ -28,7 +22,13 @@ namespace CSGizmoBox.Example.Cep
         async void Call()
         {
             Console.WriteLine("  >");
-            CepResponse response = await CepRepository.Instance(new CepConfigOptions()).GetCep("04515030");
+
+            CepConfigOptions options = new CepConfigOptions()
+            {
+                Providers = new List<string>() {CepConfigOptions.PROVIDER_OPENCEP}
+            };
+
+            CepResponse response = await CepRepository.Instance(options).GetCep("04515030");
 
             Console.WriteLine($" CepValue           :{response.CepValue}");
             Console.WriteLine($"    CepValue.Value       :{response.CepValue.Value}");
