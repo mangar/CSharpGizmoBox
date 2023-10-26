@@ -11,4 +11,8 @@
     <ProjectReference Include="..\CSGizmoBox\CSGizmoBox.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="LocalCache\" />
+  </ItemGroup>
+
 </Project>
