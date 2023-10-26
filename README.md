@@ -1,3 +1,4 @@
+
 # CS GizmoBox
 
 
@@ -8,7 +9,7 @@
 - CNPJ
 - Data
 - Hora
-- Data e Hora *TODO*
+- *[TODO]* Data e Hora
 - Mobile
 - Double Field
 - Range
@@ -22,27 +23,32 @@
 
 
 ## Local Cache
-
+**Funcionalidades**
 - SET
 - GET / GET DEFAULT
 - REMOVE
 - TTL (Time to Live)
 - DUMP
-- INCR *TODO*
-- DECR *TODO*
+- *[TODO]* INCR
+- *[TODO]* DECR
 
 
 
 
 ## Consulta de CEP
 
- *TODO*
+ **Funcionalidades**
 
- - Config via variáveis de ambiente ou parametros no construtor
- - Opções
-	- Buscar em mais de uma fonte (Brasil Aberto, apicep.com, viacep.com.br)
-	- Cache local ou remoto do retorno
-
+ - *[TODO]* Config via variáveis de ambiente ou parametros no construtor
+- Cache
+- Generalizar o API Call
+- Mais um ou dois Providers
+- Providers
+	- ViaCEP - https://viacep.com.br/
+	- OpenCEP - https://opencep.com/
+	- *[TODO]* API CEP - https://apicep.com/api-de-consulta/
+	- *[TODO]* BrasilAberto - https://brasilaberto.com/blog/posts/5-melhores-apis-de-cep-2023
+	- *[TODO]* BrasilAPI - https://brasilapi.com.br/
 
 
 ## Licença
